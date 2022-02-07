@@ -8,65 +8,67 @@
     <script src="animation.js"></script>
 </head>
 <body>
-    <header class="page-header">
-        <h1 class="page-title">Mihail Mohónov</h1>
-        <p class="page-sub-title">portfolio</p>
+    <header class="page__header">
+        <article>
+            <h1 class="page__title">Mihail Mohónov</h1>
+            <p class="page__sub-title">portfolio</p>
+        </article>
     </header>
     <main>
         <article class="skills">
-            <header class="skills__header">
+            <article class="skills-container">
                 <h2 class="skills__title">On the whole</h2>
-            </header>
-            <article class="skills__wrapper">
-                <article class="skill">
+                <article class="skill skill__frontend">
                     <h3 class="skill__title">Frontend</h3>
-                    <p><span class="html">HTML</span> 5</p>
-                    <p><span class="css">CSS</span> 3</p>
-                    <p><span class="js">JS</span> ES6</p>
-                    <p><span class="vuejs">Vue.js</span> 3.x</p>
+                    <article class="frontend-lang">
+                        <p><span class="html">HTML</span> 5</p>
+                        <p><span class="css">CSS</span> 3</p>
+                        <p><span class="js">JS</span> ES6</p>
+                        <p><span class="vuejs">Vue.js</span> 3.x</p>
+                    </article>
                 </article>
-                <article class="skill">
-                    <h3 class="skill__title">Backend</h3>
-                    <article class="skill__backend">
-                        <p>Node.js <span class="text-gray">16.X</span></p>
+                <article class="skill backend">
+                    <h3 class="skill__title backend__title">Backend</h3>
+                    <article class="backend__lang backend__container">
+                        <p>Node.js <span class="backend__lang_gray-text">16.X</span></p>
                         <p>Express</p>
                     </article>
-                    <article class="skill__database">
+                    <article class="backend__database backend__container">
                         <p>MySQL</p>
                         <p>PostgreSQL</p>
                     </article>
-                    <article class="skill__telegram">
-                        <p>Telegraf.js <span class="skill__telegram__small-text">Telegram Bot Api</span></p>
+                    <article class="backend__telegram backend__container">
+                        <p>Telegraf.js <span class="backend__telegram_small-text">Telegram Bot Api</span></p>
                     </article>
                 </article>
-                <article class="skill">
-                    <h3 class="skill__title">UX UI: my principles</h3>
-                    <article class="skill__uxui primary">
+                <article class="skill uxui">
+                    <h3 class="skill__title uxui__title">UX UI: my principles</h3>
+                    <article class="uxui__block uxui__block_primary">
                         <h4>Principle of Proximity</h4>
-                        <p>similar or related items together to emphasize their relationship</p>
+                        <p class="uxui__block__text">similar&nbsp;or&nbsp;related&nbsp;items&nbsp;together to&nbsp;emphasize&nbsp;their&nbsp;relationship</p>
                     </article>
-                    <article class="skill__uxui violet">
+                    <article class="uxui__block uxui__block_violet">
                         <h4>Color Theory</h4>
-                        <p>communicate with users through appealing color schemes in visual interfaces</p>
+                        <p class="uxui__block__text">communicate&nbsp;with&nbsp;users&nbsp;through appealing&nbsp;color&nbsp;schemes&nbsp;in visual&nbsp;interfaces</p>
                     </article>
-                    <article class="skill__uxui orange">
+                    <article class="uxui__block uxui__block_orange">
                         <h4>Vertical Rhythm</h4>
-                        <p>body of text is aligned to evenly spaced horizontal lines, making it more easier to read</p>
+                        <p class="uxui__block__text">body&nbsp;of&nbsp;text&nbsp;is&nbsp;aligned&nbsp;to&nbsp;evenly spaced&nbsp;horizontal&nbsp;lines,&nbsp;making&nbsp;it more&nbsp;easier&nbsp;to&nbsp;read</p>
                     </article>
-                    <article class="skill__uxui green">
-                        <h4>Scientific literature</h4>
-                        <p>my favorite books</p>
+                    <article class="uxui__block uxui__block_green">
+                        <h4>Scientific&nbsp;literature</h4>
+                        <p class="uxui__block__text">my favorite books</p>
                         <article class="uxui__book">
                             <h5>Daniel Goleman</h5>
-                            <p>Emotional Intelligence: Why It Can Matter More Than IQ</p>
+                            <p class="uxui__book__text">Emotional&nbsp;Intelligence: Why&nbsp;It&nbsp;Can&nbsp;Matter&nbsp;More&nbsp;Than&nbsp;IQ</p>
                         </article>
                         <article class="uxui__book">
                             <h5>Frans de Waal</h5>
-                            <p>Are We Smart Enough to Know How Smart Animals Are?</p>
+                            <p class="uxui__book__text">Are&nbsp;We&nbsp;Smart&nbsp;Enough&nbsp;to&nbsp;Know How&nbsp;Smart&nbsp;Animals&nbsp;Are?</p>
                         </article>
                         <article class="uxui__book">
-                            <h5>Ditmar Elyashevich Rosenthal</h5>
-                            <p>A guide to spelling and style</p>
+                            <h5>Ditmar&nbsp;Elyashevich Rosenthal</h5>
+                            <p class="uxui__book__text">A guide to spelling and style</p>
                         </article>
                     </article>
                 </article>
@@ -74,64 +76,86 @@
         </article>
         <article class="works">
             <h2>Works</h2>
-            <article class="work this-page">
-                <h3>This page</h3>
-                <a class="work__link view-code-dark">View code</a>
-                <a class="work__link view-layout">View layout</a>
-            </article>
-            <article class="work music-learner">
-                <h3>Music Learner</h3>
-                <p>learn <span class="creschendo">musical</span> terms</p>
-                <a class="work__link view-code-dark">View code</a>
-            </article>
-            <article class="work adtspblk">
-                <h3>ADTSPB LK</h3>
-                <p><span class="blue-gradient">Information system</span> for Academy of Digital Technologies.</p>
-                <a class="work__link view-new-layout">View new layout</a>
-                <a class="work__link view-it">View it</a>
-            </article>
-            <article class="work scroll-animation">
-                <h3>Scroll Animation</h3>
-                <p>Animation like Apple, but not Apple</p>
-                <a class="work__link view-code-dark">View code</a>
-                <a class="work__link view-it">View it</a>
-            </article>
-            <article class="work chackre">
-                <h3>Chackre</h3>
-                <p>Crayzy bot for crayzy chats!</p>
-                <a class="work__link view-code-light">View code</a>
-                <a class="work__link view-it">Try it</a>
+            <article class="works__container">
+                <article class="work this-page">
+                    <h3 class="work__title">This page</h3>
+                    <a class="work__link__code_dark">View code</a>
+                    <a class="work__link__layout">View layout</a>
+                </article>
+                <article class="work music-learner">
+                    <h3 class="work__title">Music Learner</h3>
+                    <p class="music-learner__text">learn <span class="music-learner__creschendo">musical</span><br>terms</p>
+                    <a class="work__link__code_dark">View code</a>
+                </article>
+                <article class="work adtspblk">
+                    <h3 class="work__title">ADTSPB LK</h3>
+                    <p class="adtspblk__text"><span class="adtspblk__text_blue-gradient">Information&nbsp;system</span> for Academy of Digital Technologies.</p>
+                    <div class="adtspblk__buttons">
+                        <a class="work__link__layout_new">View new layout</a>
+                        <a class="work__link__it_dark">View it</a>
+                    </div>
+                </article>
+                <article class="work scroll-animation">
+                    <article class="scroll-animation__text">
+                        <h3 class="work__title">Scroll Animation</h3>
+                        <p>Animation like Apple, but not Apple</p>
+                    </article>
+                    <div class="scroll-animation__buttons">
+                        <a class="work__link__code_dark">View code</a>
+                        <a class="work__link__it_light">View it</a>
+                    </div>
+                </article>
+                <article class="work chackre">
+                    <article class="chackre__text">
+                        <h3 class="work__title">Chackre</h3>
+                        <p>Crazy bot for crazy chats!</p>
+                    </article>
+                    <a class="work__link__code_light">View code</a>
+                    <a class="work__link__try_it">Try it</a>
+                </article>
             </article>
         </article>
         <article class="awards">
             <h2 class="text-white">Awards</h2>
-            <article class="">
-                <h3>Хакатон «Игры разумов» <span>Призёр</span></h3>
-                <p>Разработка одного из лучших решений хакатона «Игры разумов», прошедшего 30 апреля - 2 мая 2021 года в городе Москве.</p>
-                <a>Open</a>
-                <a>Diploma</a>
-            </article>
-            <article>
-                <h3>Всероссийский Го-Конгресс Владивосток 2021</h3>
-                <p>Благодарность за разработку Кентавров Го и участие во Всероссийском Го-Конгрессе</p>
-                <a>Open</a>
-                <a>Diploma</a>
-            </article>
-            <article>
-                <h3>Решение комплексных инженерных задач <span>Призёр</span></h3>
-                <p>Конкурс Талант 20.35  2020 / 2021</p>
-                <a>Open</a>
-                <a>Diploma</a>
-            </article>
-            <article>
-                <h3>Искусственный интеллект <span>Призёр</span></h3>
-                <p>Конкурс Талант 20.35  2021</p>
-                <a>Open</a>
-                <a>Diploma</a>
+            <article class="awards__container">
+                <article class="award_purple">
+                    <h3 class="award__title">Хакатон «Игры разумов» <span class="award__badge_purple">Призёр</span></h3>
+                    <p class="award__description">Разработка одного из лучших решений хакатона «Игры разумов», прошедшего 30 апреля - 2 мая 2021 года в городе Москве.</p>
+                    <div class="award__buttons">
+                        <a class="award__button_open_purple">Open</a>
+                        <a class="award__button_diploma_purple">Diploma</a>
+                    </div>
+                </article>
+                <article class="award_purple">
+                    <h3 class="award__title">Всероссийский Го-Конгресс<br>Владивосток 2021</h3>
+                    <p class="award__description">Благодарность за разработку Кентавров Го и участие во Всероссийском Го-Конгрессе</p>
+                    <div class="award__buttons">
+                        <a class="award__button_open_purple">Open</a>
+                        <a class="award__button_diploma_purple">Diploma</a>
+                    </div>
+                </article>
+                <article class="award_blue">
+                    <div class="award__title__wrapper">
+                        <h3 class="award__title">Решение комплексных<br>инженерных задач</h3><span class="award__badge_blue">Призёр</span>
+                    </div>
+                    <p class="award__description">Конкурс Талант 20.35  2020 / 2021</p>
+                    <div class="award__buttons">
+                        <a class="award__button_open_blue">Open</a>
+                        <a class="award__button_diploma_blue">Diploma</a>
+                    </div>
+                </article>
+                <article class="award_blue">
+                    <h3 class="award__title">Искусственный интеллект <span class="award__badge_blue">Призёр</span></h3>
+                    <p class="award__description">Конкурс Талант 20.35  2021</p>
+                    <div class="award__buttons">
+                        <a class="award__button_open_blue">Open</a>
+                        <a class="award__button_diploma_blue">Diploma</a>
+                    </div>
+                </article>
             </article>
         </article>
     </main>
-    <footer>
+    <footer class="page__footer">
         <p>©Mihail Mohonov</p>
     </footer>
 </body>
