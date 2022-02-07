@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
 @font-face {
     font-family: 'georgiaregular';
-    src: url('assets/georgia-webfont.woff2') format('woff2'),
-    url('assets/georgia-webfont.woff') format('woff');
+    src: url('assets/font/georgia-webfont.woff2') format('woff2'),
+    url('assets/font/georgia-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -44,6 +44,14 @@ h3 {
 h4, h5 {
     font-weight: 400;
 }
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
 .text-gray {
     color: var(--gray);
 }
@@ -305,63 +313,15 @@ h4, h5 {
     font-weight: 600;
 }
 
-.work__link__code_light,
-.work__link__code_dark,
-.work__link__layout,
-.work__link__layout_new,
-.work__link__it_dark,
-.work__link__it_light,
-.work__link__try_it {
-    white-space: nowrap;
-    padding: .5rem 1rem;
-    border-radius:  0.3rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.work__link__code_dark::before, .work__link__code_light::before {
-    content: '';
-    display: inline-block;
-    height: 2em;
-    width: 2em;
-    background-size: 2em;
-    margin-right: .5rem;
-}
-.work__link__code_dark::before {
-    background-image: url("img/github.svg");
-    background-position: 0 100%;
-}
-.work__link__code_light::before {
-    background-image: url("img/github.svg");
-    background-position: 0 0;
-}
 
-.work__link__layout::before, .work__link__layout_new::before {
-    content: '';
-    display: inline-block;
-    height: 2em;
-    width: 2em;
-    background-image: url("img/white-figma.svg");
-    background-size: auto 2em;
-    background-repeat: no-repeat;
-}
-.work__link__layout {
-    color: var(--white);
-    background-color: hsla(284, 59%, 65%, 1);
-}
-.work__link__layout_new {
-    background-image: linear-gradient(-40deg, hsla(247, 59%, 65%, 1) 0%, hsla(284, 59%, 65%, 1) 40%);
-}
 .this-page {
     display: grid;
     grid-gap: 1.3em;
     background-color: hsla(181, 11%, 96%, 1);
     max-width: min-content;
 }
-.this-page .work__link__code_dark {
-    background-color: hsla(132, 59%, 65%, 1);
-}
+
+
 .music-learner {
     display: grid;
     grid-gap: 1em;
@@ -388,10 +348,8 @@ h4, h5 {
     background-image: url("img/cresschendo.svg");
     background-repeat: no-repeat;
 }
-.music-learner .work__link__code_dark {
-    color: var(--black);
-    background-color: hsla(28, 30%, 75%, 1);
-}
+
+
 .adtspblk {
     grid-column: span 2;
     display: grid;
@@ -415,10 +373,8 @@ h4, h5 {
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 1em;
 }
-.work__link__it_dark {
-    justify-content: center;
-    background-color: hsla(0, 0%, 26%, 1);
-}
+
+
 .scroll-animation {
     position: relative;
     display: grid;
@@ -446,13 +402,8 @@ h4, h5 {
     grid-gap: 1em;
     color: var(--black);
 }
-.scroll-animation .work__link__code_dark {
-    background-color: hsla(181, 52%, 45%, 1);
-}
-.work__link__it_light {
-    justify-content: center;
-    background-color: var(--white);
-}
+
+
 .chackre {
     display: grid;
     grid-gap: 1em;
@@ -467,6 +418,93 @@ h4, h5 {
     display: grid;
     grid-gap: 0.3em;
 }
+
+.work__link__code_light,
+.work__link__code_dark,
+.work__link__layout,
+.work__link__layout_new,
+.work__link__it_dark,
+.work__link__it_light,
+.work__link__try_it,
+.work__link__code_light:link,
+.work__link__code_dark:link,
+.work__link__layout:link,
+.work__link__layout_new:link,
+.work__link__it_dark:link,
+.work__link__it_light:link,
+.work__link__try_it:link,
+.work__link__code_light:visited,
+.work__link__code_dark:visited,
+.work__link__layout:visited,
+.work__link__layout_new:visited,
+.work__link__it_dark:visited,
+.work__link__it_light:visited,
+.work__link__try_it:visited {
+    white-space: nowrap;
+    padding: .5rem 1rem;
+    border-radius:  0.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.work__link__code_dark::before,
+.work__link__code_light::before {
+    content: '';
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background-size: 2em;
+    margin-right: .5rem;
+}
+.work__link__code_dark::before {
+    background-image: url("img/github.svg");
+    background-position: 0 100%;
+}
+.work__link__code_light::before {
+    background-image: url("img/github.svg");
+    background-position: 0 0;
+}
+
+.work__link__layout::before,
+.work__link__layout_new::before {
+    content: '';
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background-image: url("img/white-figma.svg");
+    background-size: auto 2em;
+    background-repeat: no-repeat;
+}
+.work__link__layout {
+    color: var(--white);
+    background-color: hsla(284, 59%, 65%, 1);
+}
+.work__link__layout_new {
+    background-image: linear-gradient(-40deg, hsla(247, 59%, 65%, 1) 0%, hsla(284, 59%, 65%, 1) 40%);
+}
+
+.this-page .work__link__code_dark {
+    background-color: hsla(132, 59%, 65%, 1);
+}
+.music-learner .work__link__code_dark {
+    color: var(--black);
+    background-color: hsla(28, 30%, 75%, 1);
+}
+.work__link__it_dark {
+    justify-content: center;
+    background-color: hsla(0, 0%, 26%, 1);
+}
+.scroll-animation .work__link__code_dark {
+    background-color: hsla(181, 52%, 45%, 1);
+}
+.work__link__it_light {
+    justify-content: center;
+    background-color: var(--white);
+}
 .chackre .work__link__code_light {
     background-color: hsla(200, 75%, 64%, 1);
 }
@@ -474,6 +512,49 @@ h4, h5 {
     justify-content: center;
     background-color: hsla(200, 75%, 64%, 1);
 }
+
+.work__link__code_dark:link,
+.work__link__it_light:link,
+.work__link__code_dark:visited,
+.work__link__it_light:visited {
+    color: var(--black);
+}
+.work__link__code_light:link,
+.work__link__it_dark:link,
+.work__link__try_it:link,
+.work__link__layout:link,
+.work__link__layout_new:link,
+.work__link__code_light:visited,
+.work__link__it_dark:visited,
+.work__link__try_it:visited,
+.work__link__layout:visited,
+.work__link__layout_new:visited{
+    color: var(--white);
+}
+
+.work__link__code_light:hover,
+.work__link__code_dark:hover,
+.work__link__layout:hover,
+.work__link__layout_new:hover,
+.work__link__it_dark:hover,
+.work__link__it_light:hover,
+.work__link__try_it:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.work__link__code_light:active,
+.work__link__code_dark:active,
+.work__link__layout:active,
+.work__link__layout_new:active,
+.work__link__it_dark:active,
+.work__link__it_light:active,
+.work__link__try_it:active {
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+
 .awards {
     display: grid;
     grid-gap: 3.3em;
@@ -554,15 +635,42 @@ h4, h5 {
     border-radius:  0.3rem;
 }
 .award__button_open_purple,
-.award__button_diploma_purple {
+.award__button_diploma_purple,
+.award__button_open_purple:link,
+.award__button_diploma_purple:link,
+.award__button_open_purple:visited,
+.award__button_diploma_purple:visited {
     color: var(--purple-dark);
     background-color: var(--purple-light);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
 .award__button_open_blue,
-.award__button_diploma_blue{
+.award__button_diploma_blue,
+.award__button_open_blue:link,
+.award__button_diploma_blue:link,
+.award__button_open_blue:visited,
+.award__button_diploma_blue:visited {
     color: var(--blue-dark);
     background-color: var(--blue-light);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
+
+.award__button_open_purple:hover,
+.award__button_open_blue:hover,
+.award__button_diploma_purple:hover,
+.award__button_diploma_blue:hover {
+    transform: scale(1.1);
+}
+
+.award__button_open_purple:active,
+.award__button_open_blue:active,
+.award__button_diploma_purple:active,
+.award__button_diploma_blue:active {
+    transform: scale(0.9);
+}
+
 .award__button_open_purple::before,
 .award__button_open_blue::before,
 .award__button_diploma_purple::before,
