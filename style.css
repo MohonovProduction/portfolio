@@ -114,10 +114,11 @@ h4, h5 {
     font-size: 1.3rem;
     font-weight: 500;
 }
-.skill.skill__frontend {
-    justify-self: end;
+.frontend {
     grid-area: skill-frontend;
+    display: grid;
     white-space: nowrap;
+    max-width: min-content;
 }
 .frontend-lang {
     display: grid;
@@ -317,6 +318,7 @@ h4, h5 {
     font-weight: 600;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .work__link__code_dark::before, .work__link__code_light::before {
     content: '';
@@ -599,4 +601,79 @@ h4, h5 {
     background-color: hsla(0, 0%, 8%, 1);
     color: var(--gray);
     padding: 5em;
+}
+
+@media (max-width: 570px) {
+    .skills {
+        padding: 0;
+    }
+    .skills-container {
+        display: grid;
+        grid-template-areas:
+            'skills-title'
+            'skill-frontend'
+            'skill-backend-database'
+            'skill-uxui';
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: auto;
+        justify-items: stretch;
+        padding: 10rem 1rem;
+        width: 100%;
+    }
+    .frontend,
+    .backend,
+    .uxui {
+        padding: 6rem 3rem;
+        min-width: 100%;
+        justify-content: center;
+    }
+    .backend {
+        display: grid;
+        grid-template-areas:
+            'backend-title'
+            'backend-lang'
+            'backend-db'
+            'backend-telegram';
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 1em;
+    }
+    .backend__telegram {
+        white-space: normal;
+        background-image: url("img/telegram-bg.svg");
+    }
+    .backend__telegram_small-text {
+        margin: 0;
+    }
+    .uxui {
+        display: grid;
+        grid-template-areas:
+            'ux-ui-title'
+            '.'
+            '.'
+            '.'
+            'ux-ui-book';
+    }
+
+    .works__container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-flow: row;
+        grid-gap: 2.7em;
+        align-items: center;
+        max-width: min-content;
+    }
+    .work {
+        max-width: 100%;
+    }
+    .adtspblk {
+        grid-column: unset;
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 1rem;
+        align-items: center;
+        max-width: min-content;
+        color: var(--white);
+        background-color: hsla(0, 0%, 16%, 1);
+    }
 }
