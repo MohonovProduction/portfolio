@@ -94,13 +94,14 @@ a:active {
     align-items: center;
 }
 .skills-container {
+    -moz-box-sizing: content-box;
     display: grid;
     grid-template-areas:
             'skills-title skills-title'
             'skill-frontend skill-backend-database'
             'skill-uxui skill-uxui';
-    grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     grid-gap: 3rem 1rem;
     justify-items: center;
 }
